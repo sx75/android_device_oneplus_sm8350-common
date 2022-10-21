@@ -152,3 +152,7 @@ service oplus_sensor_fb /odm/bin/oplus_sensor_fb
 on property:ro.board.platform=lahaina
     # Disable multiple kswapd threads
     write /proc/sys/vm/kswapd_threads 1
+
+on property:ro.board.platform=lahaina
+    # Disable multiple kswapd threads
+    write /proc/sys/vm/kswapd_threads 1
