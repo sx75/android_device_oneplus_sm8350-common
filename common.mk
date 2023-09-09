@@ -162,6 +162,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.sys.brightness.low.gamma=true
 
+#Dolby
+PRODUCT_PACKAGES += \
+    OplusDolby
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3.vendor \
@@ -264,6 +268,10 @@ PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.1-service.oplus
 
 # Media
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/media/media_codecs_vendor_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_vendor_audio.xml \
+    $(LOCAL_PATH)/media/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml
+
 PRODUCT_PACKAGES += \
     libavservices_minijail \
     libavservices_minijail.vendor \
