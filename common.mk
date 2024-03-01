@@ -412,6 +412,10 @@ PRODUCT_COPY_FILES += \
 
 $(call inherit-product, hardware/oplus/oplus-fwk/oplus-fwk.mk)
 
+# Tensor Flow Lite
+PRODUCT_PACKAGES += \
+    libtensorflowlite_jni
+
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal-service.qti
