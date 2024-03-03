@@ -16,4 +16,8 @@
     <!-- Type of the quick pickup sensor. Empty if quick pickup is not supported. -->
     <string name="config_quickPickupSensorType" translatable="false">qti.sensor.amd</string>
 
+    <!-- Udfps fingerprint animation -->
+    <dimen name="udfps_animation_offset">0dip</dimen>
+
+
 </resources>
