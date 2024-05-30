@@ -11,4 +11,7 @@
     <!-- Doze: should pulse on pick up? -->
     <bool name="doze_pulse_on_pick_up">true</bool>
 
+    <!-- Doze: does the double tap sensor need a proximity check? -->
+    <bool name="doze_double_tap_proximity_check">true</bool>
+
 </resources>
