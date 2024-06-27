@@ -28,4 +28,7 @@
      vibrator is capable of subtle vibrations -->
     <bool name="config_vibrateOnIconAnimation">true</bool>
 
+    <!-- Doze: should pulse on pick up? -->
+    <bool name="doze_pulse_on_pick_up">true</bool>
+
 </resources>
