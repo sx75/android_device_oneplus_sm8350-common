@@ -17,4 +17,7 @@
 <resources>
     <!-- Show battery cycle count -->
     <bool name="config_show_battery_cycle_count" translatable="false">true</bool>
+    
+    <string name="maintainer_name">SID 🖤️</string>
+    <string name="maintainer_telegram" translatable="false">https://t.me/sid7087</string>
 </resources>
