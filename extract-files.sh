@@ -108,6 +108,9 @@ function blob_fixup() {
         odm/lib/liblvimfs_wrapper.so|odm/lib64/libCOppLceTonemapAPI.so|odm/lib64/libaps_frame_registration.so|vendor/lib64/libalsc.so)
             "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
             ;;
+        odm/lib64/vendor.oplus.hardware.urcc-V1-ndk_platform.so)
+            grep -q libjsoncpp-v30.so "${2}" || "${PATCHELF}" --replace-needed "libjsoncpp.so" "libjsoncpp-v30.so" "${2}"
+            ;;
     esac
 }
 
