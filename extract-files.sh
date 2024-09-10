@@ -77,6 +77,10 @@ function blob_fixup() {
         odm/etc/init/vendor-oplus-hardware-oplusSensor-V1-service.rc)
             sed -i "/user/ s/system/root/g" "${2}"
             ;;
+        odm/lib64/libwvhidl.so|odm/lib64/mediadrm/libwvdrmengine.so)
+            [ "$2" = "" ] && return 0
+            grep -q "libcrypto_shim.so" "${2}" || "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
+            ;;
         product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml)
             sed -i "s/\/my_product/\/product/" "${2}"
             ;;
