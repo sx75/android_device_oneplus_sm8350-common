@@ -83,6 +83,10 @@ function blob_fixup() {
         odm/etc/init/vendor-oplus-hardware-oplusSensor-V1-service.rc)
             sed -i "/user/ s/system/root/g" "${2}"
             ;;
+        odm/lib64/libAlgoProcess.so)
+            [ "$2" = "" ] && return 0
+            sed -i "s/android.hardware.graphics.common-V1-ndk_platform.so/android.hardware.graphics.common-V5-ndk.so\x00\x00\x00\x00\x00\x00\x00\x00\x00/" "${2}"
+            ;;
         product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml)
             [ "$2" = "" ] && return 0
             sed -i "s/\/my_product/\/product/" "${2}"
